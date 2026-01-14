@@ -1,0 +1,106 @@
+<div class="page-container">
+    <div class="form-container">
+        <h2>Enter Your Details</h2>
+        <form id="allotmentForm" class="allotmentForm" onsubmit="return generateAllotment(event)">
+            <div class="form-group">
+                <label for="clientName">Client Name:</label>
+                <input type="text" id="clientName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ticketId">Ticket ID:</label>
+                <input type="text" id="ticketId" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="projectName">Project Name:</label>
+                <select id="projectName">
+                    <option value="Shyam Aangan" selected>Shyam Aangan</option>
+                    <option value="Shyam Aangan Farm House">Shyam Aangan Farm House</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="unitNumber">Unit Number:</label>
+                <input type="text" id="unitNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="area">Area (Sq. Yds.):</label>
+                <input type="number" id="area" step="0.01" required onchange="calculateTotalCost()">
+            </div>
+            
+            <div class="form-group">
+                <label for="bsp">BSP (Per Sq.Yd):</label>
+                <input type="number" id="bsp" step="0.01" required onchange="calculateTotalCost()">
+            </div>
+            
+            <div class="form-group">
+                <label for="plc">PLC (%):</label>
+                <input type="number" id="plc" step="0.01" onchange="calculateTotalCost()">
+            </div>
+            
+            <div class="form-group">
+                <label for="paymentPlan">Payment Plan:</label>
+                <select id="paymentPlan" required onchange="updatePaymentPlan()">
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="12" selected>12 Months</option>
+                    <option value="18">18 Months</option>
+                    <option value="24">24 Months</option>
+                </select>
+            </div>
+            
+            <div class="cost-summary">
+                <p>Total Cost: ₹<span id="totalCostDisplay">0.00</span></p>
+                <p>Initial Payment (10%): ₹<span id="initialPaymentDisplay">0.00</span></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="bookingDate">Booking Date:</label>
+                <input type="date" id="bookingDate" required>
+            </div>
+            <div class="form-group">
+                <label for="advisorName">Advisor Name:</label>
+                <input type="text" id="advisorName" required>
+            </div>
+            <div class="form-group">
+                <label for="advisorNumber">Advisor Number:</label>
+                <input type="text" id="advisorNumber" required>
+            </div>
+            
+            <button type="submit">
+                <i class="fas fa-sync-alt"></i> Generate Allotment Letter
+            </button>
+        </form>
+    </div>
+    
+    <div class="preview-container">
+        <h2>Allotment Letter Preview</h2>
+        <div id="allotmentPreview" class="allotment-letter">
+            <p>Please fill out the form and generate your allotment letter.</p>
+        </div>
+        
+        <div class="download-options">
+            <h3>Download Options</h3>
+            
+            <div class="option-group">
+                <button onclick="downloadWithHtml2Canvas()">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button onclick="saveAllotmentAsImage()">
+                    <i class="fas fa-image"></i> Save as Image
+                </button>
+            </div>
+            
+            <div id="allotmentSuccessMessage" class="success-message">
+                Download successful!
+            </div>
+        </div>
+    </div>
+</div>

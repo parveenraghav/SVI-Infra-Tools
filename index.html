@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Plan Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="spa-header">
+        <div class="header-content">
+            <div class="header-top">
+                <div class="logo-section">
+                    <i class="fas fa-calculator logo-icon"></i>
+                    <div>
+                        <h1>SVI Infra Solutions </h1>
+                        <p class="description">Complete solution for generating payment plans and receipts</p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+
+            <label for="navToggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="nav-tabs">
+                <button class="nav-tab-button active" data-page="allotment">
+                    <i class="fas fa-file-contract"></i> Allotment Letter
+                </button>
+                <button class="nav-tab-button" data-page="payment">
+                    <i class="fas fa-receipt"></i> Payment Receipt
+                </button>
+                <button class="nav-tab-button" data-page="calculator">
+                    <i class="fas fa-calculator"></i> Payment Plan
+                </button>
+                <button class="nav-tab-button" data-page="offer">
+                    <i class="fas fa-receipt"></i> Offer Letter
+                </button>
+                <button class="nav-tab-button" data-page="bba">
+                    <i class="fas fa-calculator"></i> BBA
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+        <!-- Content will be loaded dynamically here -->
+        <div class="loading-container">
+            <div class="loader"></div>
+            <p>Loading content...</p>
+        </div>
+    </main>
+
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

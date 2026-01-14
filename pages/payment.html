@@ -1,0 +1,168 @@
+<div class="page-container">
+    <div class="form-container">
+        <h2><i class="fas fa-edit"></i> Enter Payment Details</h2>
+        <form id="receiptForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="receiptNo"><i class="fas fa-hashtag"></i> Receipt Number</label>
+                    <input type="text" id="receiptNo" value="" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date"><i class="fas fa-calendar"></i> Date</label>
+                    <input type="date" id="date" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name (Mr./Mrs./M/s)</label>
+                <input type="text" id="name" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="previewRefId"><i class="fas fa-user"></i> Ref. Id</label>
+                <input type="text" id="previewRefId" value="" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="amount"><i class="fas fa-rupee-sign"></i> Amount (in digits)</label>
+                    <input type="number" id="amount" value="" required>
+                </div>
+                
+                <!--div class="form-group">
+                    <label for="paymentMethod"><i class="fas fa-credit-card"></i> Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="Cash">Cash</option>
+                        <option value="Draft">Draft</option>
+                        <option value="Cheque" selected>Cheque</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+                </div>-->
+            </div>
+            <div class="form-group">
+                <label for="amountWords"><i class="fas fa-file-invoice-dollar"></i> Amount (in words)</label>
+                <input type="text" id="amountWords" value="" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="paymentRef"><i class="fas fa-file-invoice"></i> Payment Reference Number</label>
+                    <input type="text" id="paymentRef" value="" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="drawnOn"><i class="fas fa-building"></i> Drawn On</label>
+                <input type="date" id="drawnOn" value="">
+            </div>
+            <div class="form-group">
+                <label for="plotNo"><i class="fas fa-building"></i> Plot No</label>
+                <input type="text" id="plotNo" value="">
+            </div>
+            <div class="form-group">
+                <label for="plotSize"><i class="fas fa-building"></i> Plot Size</label>
+                <input type="text" id="plotSize" value="" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="account"><i class="fas fa-landmark"></i> On Account Of</label>
+                <input type="text" id="account" value="" required>
+            </div>
+                    
+            
+            <button type="submit">
+                <i class="fas fa-sync-alt"></i> Generate Receipt
+            </button>
+        </form>
+    </div>
+    
+    <div class="preview-container">
+        <h2><i class="fas fa-eye"></i> Receipt Preview</h2>
+        <div id="receiptPreview" class="receipt">
+            <div class="company-logo">
+                <div class="logo">
+                    <img src="image/sviLogo.png" alt="Company Logo" style="max-width: 180px; height: auto;">
+                </div>
+                <div class="adress">
+                    <p><b>SVI Infra Solutions Pvt. Ltd</b></p>
+                    <p>Plot No. P13, Sector 15, Noida, UP - 201301</p>
+                    <p>Cell: <span>+91 73000 07643</span> | Email: <span>info@sviinfrasolutions.com</span></p>
+                    <p>Website: <span>www.sviinfrasolutions.in</span> | <span>www.sviinfrasolutions.com</span></p>
+                </div>
+            </div>
+            
+            <div class="receipt-header">
+                <h2>PAYMENT RECEIPT</h2>
+                <p style="display: flex; justify-content: space-between;">
+                     <span>Receipt No: <span class="highlight" id="previewReceiptNo"> </span> </span>
+                     <span>Date: <span class="highlight" id="previewDate"></span></span></p>
+            </div>
+            
+            <div class="receipt-details">
+                <div class="watermark">
+                    <img src="image/sviLogo.png" alt="Company Logo" style="max-width: 500px; height: auto;">
+                </div>
+                <div>
+                    <span>Received with thanks from Mr. / Mrs. / M/s : </span>
+                    <span class="highlight" id="previewName"></span>
+                </div>
+                <div>
+                    <span>Ref. Id : </span>
+                    <span class="highlight" id="previewRefIdChange"></span>
+                </div>
+                
+                <div>
+                    <span>The sum of Rupees : </span>
+                    <span class="highlight" id="previewAmount"></span>
+                </div>
+                <div>
+                    <span> Rupees in Words : </span>
+                    <span class="highlight" id="previewAmountWords"></span>
+                </div>
+                
+                <div>
+                    <span> <span id="previewPaymentMethod"></span> By UPI / Draft / Cheque No / Credit Card No : </span>
+                    <span class="highlight" id="previewPaymentRef"></span>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Drawn On : <span class="highlight" id="previewDrawnOn"></span></span>
+                    <span>Plot No : <span class="highlight" id="plotNochange"></span></span>
+                    <span>Plot Size  : <span class="highlight" id="plotSizechange"></span></span>
+                </div>
+                
+                <div>
+                    <span>On Account of : </span>
+                    <span class="highlight" id="previewAccount"></span>
+                </div>
+                
+                </div>
+            
+            <div class="receipt-bottom">
+                <div class="receipt-amount">
+                    <span id="previewAmountFooter"></span>
+                    <p style="font-size: 14px; margin-top: 8px; font-style: italic;" id="previewPaymentNote"></p>
+                </div>
+                <div class="receipt-footer">
+                    <p style="margin-top: 0;">Authorized Signatory</p>
+                    <img src="image/signature-removebg-preview.png" alt="Signature" style="max-width: 150px; height: auto; margin-top: -29px; margin-bottom: -30px;">
+                    <div style="margin-top: 5px; width: 200px; border-top: 1px solid #7f8c8d; margin-right: auto; padding-top: 5px;">
+                        Stamp & Signature
+                    </div>
+                </div>
+            </div>
+            <div class="additional-notes">
+                <p>Thank you for your business. Please keep this receipt for your records.</p>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button class="download-btn" onclick="downloadReceiptPDF()" style="background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);">
+                <i class="fas fa-download"></i> Download as PDF
+            </button>
+            <button onclick="saveReceiptAsImage()" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                <i class="fas fa-image"></i> Save as Image
+            </button>
+        </div>
+    </div>
+</div>

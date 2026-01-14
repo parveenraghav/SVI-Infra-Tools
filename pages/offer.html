@@ -1,0 +1,104 @@
+<div class="page-container">
+    <div class="form-container">
+        <h2><i class="fas fa-file-signature"></i> Offer Letter Generator</h2>
+        <form id="offerForm">
+            <div class="allotmentForm">
+            <div class="form-group">
+                <label for="offerDate">Date:</label>
+                <input type="date" id="offerDate">
+            </div> 
+
+            <div class="form-group">
+                <label for="offerName">Name:</label>
+                <input type="text" id="offerName" placeholder="Enter name">
+            </div>
+
+            <div class="form-group full-span">
+                <label for="offerAddress">Address:</label>
+                <textarea id="offerAddress" placeholder="Enter address"></textarea>
+            </div>
+
+                <div class="form-group">
+                    <label for="offerMobile">Mobile No:</label>
+                    <input type="tel" id="offerMobile" placeholder="Primary mobile">
+                </div>
+
+                <div class="form-group">
+                    <label for="offerAltMobile">Alternative No:</label>
+                    <input type="tel" id="offerAltMobile" placeholder="Alternative mobile (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="offerEmail">Email ID:</label>
+                    <input type="email" id="offerEmail" placeholder="Email address">
+                </div>
+
+            <div class="form-group">
+                <label for="offerDesignation">Designation:</label>
+                <input type="text" id="offerDesignation" placeholder="Offered designation">
+            </div>
+
+            <div class="form-group">
+                <label for="offerDepartment">Department:</label>
+                <input type="text" id="offerDepartment" placeholder="Department">
+            </div>
+
+            <div class="form-group">
+                <label for="offerReporting">Reporting To:</label>
+                <input type="text" id="offerReporting" placeholder="Reporting person">
+            </div>
+
+            <div class="form-group">
+                <label for="offerApptDate">Appointment Date:</label>
+                <input type="date" id="offerApptDate">
+            </div>
+
+            <div class="form-group">
+                <label for="offerLocation">Location of Posting:</label>
+                <input type="text" id="offerLocation" placeholder="Location">
+            </div>
+
+            <div class="form-group">
+                <label for="offerSalary">Salary (CTC) Per Month:</label>
+                <input type="number" id="offerSalary" placeholder="Enter salary">
+            </div>
+
+            <div class="form-group">
+                <label for="offerTarget">Target:</label>
+                <input type="text" id="offerTarget" placeholder="Target (optional)">
+            </div>
+
+            <div class="form-group full-span">
+                <button type="button" onclick="generateOfferLetter(event)">
+                    <i class="fas fa-file-alt"></i> Generate Offer Letter
+                </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="preview-container">
+        <h2>Offer Letter Preview <p style="font-size: 15px; font-weight: 500;">Generated Document</p></h2>
+
+        <div id="offerPreview" class="offer-output">
+            Please fill out the form and generate the offer letter.
+        </div>
+
+        <div class="download-options">
+            <h3>Download Options</h3>
+
+            <div class="option-group">
+                <button onclick="downloadOfferPDF()">
+                    <i class="fas fa-file-pdf"></i> Download as PDF
+                </button>
+                <button onclick="saveOfferAsImage()">
+                    <i class="fas fa-image"></i> Save as Image
+                </button>
+            </div>
+
+            <div id="offerSuccessMessage" class="success-message">
+                Download successful!
+            </div>
+        </div>
+    </div>
+</div>

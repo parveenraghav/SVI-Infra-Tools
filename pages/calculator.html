@@ -1,0 +1,61 @@
+<div class="page-container">
+    <div class="form-container">
+        <h2><i class="fas fa-calculator"></i> Payment Plan Calculator</h2>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="planPlotSize">Plot Size (sq. yards):</label>
+                <input type="number" id="planPlotSize" placeholder="Enter plot size" value="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="planPlotRate">Plot Rate (per sq. yard):</label>
+                <input type="number" id="planPlotRate" placeholder="Enter rate per sq. yard" value="5000">
+            </div>
+            
+            <div class="form-group">
+                <label for="planPlcPercent">PLC Percentage (%):</label>
+                <input type="number" id="planPlcPercent" placeholder="Enter PLC percentage (e.g. 5 or 0)" value="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="planEmiMonths">Choose Plan Duration (months):</label>
+                <select id="planEmiMonths">
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                    <option value="12">12 Months</option>
+                    <option value="18">18 Months</option>
+                    <option value="24" selected>24 Months</option>
+                </select>
+            </div>
+            
+            <button type="button" onclick="calculatePlan()">
+                <i class="fas fa-calculator"></i> Calculate Plan
+            </button>
+        </form>
+    </div>
+    
+    <div class="preview-container">
+        <h2>Payment Schedule <p style="font-size: 15px; font-weight: 500;">Your complete payment breakdown</p></h2>
+        
+        <div id="paymentPlanPreview" class="payment-plan-output">
+            Please fill out the form and calculate your payment plan.
+        </div>
+        
+        <div class="download-options">
+            <h3>Download Options</h3>
+            
+            <div class="option-group">
+                <button onclick="downloadPlanPDF()">
+                    <i class="fas fa-file-pdf"></i> Download as PDF
+                </button>
+                <button onclick="savePlanAsImage()">
+                    <i class="fas fa-image"></i> Save as Image
+                </button>
+            </div>
+            
+            <div id="calculatorSuccessMessage" class="success-message">
+                Download successful!
+            </div>
+        </div>
+    </div>
+</div>
