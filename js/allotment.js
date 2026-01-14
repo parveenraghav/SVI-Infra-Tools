@@ -85,7 +85,7 @@ function generateAllotment(event) {
                     <p class="company-name"><b>SVI INFRA SOLUTIONS PVT. LTD</b></p>
                     <p>Cell: <span>+91 73000 07643</span> | Email: <span>info@sviinfrasolutions.com</span></p>
                     <p>Website: <span>www.sviinfrasolutions.in</span> | <span>www.sviinfrasolutions.com</span></p>
-                    <p>Office Address : Plot No. P13, Sector 15, Noida, UP - 201301</p>
+                    <p>Office Address : A-61 Sector 65 Noida Uttar Pradesh 201309</p>
                 </div>
              <div class="logo">
                     <img src="image/sviLogo.png" alt="Company Logo" style="max-width: 180px; height: auto;">
@@ -315,4 +315,5 @@ function saveAllotmentAsImage() {
         alert('Error generating image: ' + error.message);
         console.error(error);
     }
+
 }
