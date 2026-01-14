@@ -76,7 +76,7 @@ function loadPageScript(pageName) {
     // Create new script element
     const script = document.createElement('script');
     script.id = `${pageName}-script`;
-    script.src = `js/${pageName}.js`;
+    script.src = `/js/${pageName}.js`;
     script.onerror = function() {
         console.warn(`Failed to load ${pageName}.js`);
     };
@@ -168,3 +168,4 @@ function showSuccess(elementId) {
     }
 
 }
+
