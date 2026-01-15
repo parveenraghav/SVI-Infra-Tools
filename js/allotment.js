@@ -169,15 +169,16 @@ Aangan  (Kishan Garh Renwal, Jaipur, Rajasthan). It is a perfect choice and you 
             <p>In the event you fail to make the payments as per the payment plan chosen by you, the allotment of these plots will be automatically cancelled.</p>
         </div>
 
+        <div class="allotment-footer">
+        <div class="bankdetails">
         <p><strong>Payment can be transferred online using the following details:</strong></p>
-
         <p><strong>Account Name: Svi Infra Solutions Pvt. Ltd </strong></p>
         <p><strong>Account Number: 0894102000013837</strong></p>
         <p><strong>Bank: IDBI BANK </strong></p>
         <p><strong>IFSC CODE: IBKL0000894 </strong></p>
 
         <p>Your account manager is <strong>${advisorName}</strong> and will be reachable on <strong>${advisorNumber}</strong> for any queries.</p>
-
+        </div>
         <div class="signature">
             <p>With Best Regards</p>
             
@@ -186,6 +187,7 @@ Aangan  (Kishan Garh Renwal, Jaipur, Rajasthan). It is a perfect choice and you 
             <div style="margin-top: 5px; width: 200px; border-top: 1px solid #7f8c8d; margin-right: auto; padding-top: 5px;">
                 Director
             </div>
+        </div>
         </div>
     `;
     
@@ -317,6 +319,7 @@ function saveAllotmentAsImage() {
     }
 
 }
+
 
 
 
