@@ -359,12 +359,13 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 15px;
+    font-size: 19px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
 }
 
 table, th, td {
-    border: 1px solid #e2e8f0;
+    border: 1px solid #151516;
 }
 
 th, td {
@@ -373,7 +374,7 @@ th, td {
 }
 
 th {
-    background: linear-gradient(135deg, #ebf4ff 0%, #e6fffa 100%);
+    background: #18b1f1;
     color: #2c5282;
     font-weight: 600;
 }
@@ -815,3 +816,4 @@ th {
     }
 
 }
+
