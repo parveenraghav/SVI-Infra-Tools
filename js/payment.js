@@ -238,6 +238,10 @@ function generateReceipt() {
 function downloadReceiptPDF() {
     // Use html2canvas and jsPDF
     const receiptElement = document.getElementById('receiptPreview');
+    const name = document.getElementById('name').value.trim() || 'client';
+    const safeName = name.replace(/[^a-zA-Z0-9]/g, '_');
+
+    const amount = document.getElementById('amount').value.trim() || '0';
     
     html2canvas(receiptElement, {
         scale: 2,
@@ -264,7 +268,7 @@ function downloadReceiptPDF() {
         }
         
         // Save the PDF
-        pdf.save('payment_receipt.pdf');
+        pdf.save(`${safeName}_${amount}_payment_receipt.pdf`);
     });
 }
 
@@ -296,4 +300,5 @@ function saveReceiptAsImage() {
         alert('Error generating image: ' + error.message);
         console.error(error);
     }
+
 }
