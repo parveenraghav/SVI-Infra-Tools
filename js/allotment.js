@@ -217,6 +217,8 @@ function generateEMIRows(emiDates, emiAmount, numberOfEMIs, emiPercentage) {
 // Download PDF using html2canvas
 function downloadWithHtml2Canvas() {
     const element = document.getElementById('allotmentPreview');
+    const clientName = document.getElementById('clientName').value.trim() || 'client';
+    const safeName = clientName.replace(/[^a-zA-Z0-9]/g, '_');
 
     html2canvas(element, {
         scale: 2,
@@ -283,7 +285,7 @@ function downloadWithHtml2Canvas() {
             page++;
         }
 
-        pdf.save('allotment_letter.pdf');
+       pdf.save(`${safeName}_allotment_letter.pdf`);
     });
 }
 
@@ -319,6 +321,7 @@ function saveAllotmentAsImage() {
     }
 
 }
+
 
 
 
