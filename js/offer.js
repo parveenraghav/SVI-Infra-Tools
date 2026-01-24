@@ -48,7 +48,7 @@ function generateOfferLetter(event) {
 
         <div class="address">
             <p class="marbottom"><strong>To,</strong></p>
-            <p><strong>Mr. ${name}</strong></p>
+            <p><strong>Mr./Mrs/Ms. ${name}</strong></p>
             <p>${address}</p>
             <p><strong>Mobile NO :</strong> ${mobile}.</p>
             <p><strong>Alternative NO :</strong> ${altMobile}.</p>
@@ -71,7 +71,7 @@ function generateOfferLetter(event) {
             <strong>2.</strong> Your primary work location will be <strong>${location}</strong>. However, you may be required to travel or relocate as per company requirements.
         </p>
         <p class="marbottom"><strong>Salary & Benefits</strong><br>
-            <strong>3.</strong> Your total compensation will be ₹ <strong>${salary} (Target ${target} sq yrd) Per Month ${slab}</strong>, which includes all statutory benefits as applicable. Additional performance-based incentives will be provided as per company policy.
+            <strong>3.</strong> Your total compensation will be ₹ <strong>${salary} (Target ${target} sq yrd) Per Month ( your percentage  slab is ${slab}% )</strong>, which includes all statutory benefits as applicable. Additional performance-based incentives will be provided as per company policy.
         </p>
         <p class="marbottom"><strong>Working Hours</strong><br>
                 <strong>4.</strong> Your working hours will be from 10:30 am to 6:30 pm, Days of the Week, Wednesday to Monday.
@@ -214,4 +214,5 @@ function saveOfferAsImage() {
     }
 
 }
+
 
